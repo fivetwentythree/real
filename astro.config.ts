@@ -25,9 +25,7 @@ import rehypeUnwrapImages from "rehype-unwrap-images";
 export default defineConfig({
 	site: siteConfig.url,
 	base: "/real/",
-	image: {
-		domains: ["webmention.io"],
-	},
+
 	integrations: [
 		expressiveCode(expressiveCodeOptions),
 		icon(),
@@ -97,13 +95,7 @@ export default defineConfig({
 		},
 		plugins: [tailwind(), rawFonts([".ttf", ".woff"])],
 	},
-	env: {
-		schema: {
-			WEBMENTION_API_KEY: envField.string({ context: "server", access: "secret", optional: true }),
-			WEBMENTION_URL: envField.string({ context: "client", access: "public", optional: true }),
-			WEBMENTION_PINGBACK: envField.string({ context: "client", access: "public", optional: true }),
-		},
-	},
+
 });
 
 function rawFonts(ext: string[]) {
