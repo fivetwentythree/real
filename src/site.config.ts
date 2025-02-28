@@ -15,7 +15,7 @@ export const siteConfig: SiteConfig = {
 	lang: "en-GB",
 	ogLocale: "en_GB",
 	title: "Lochana Perera",
-	url: "https://fivetwentythree.github.io/real/",
+	url: "https://fivetwentythree.github.io/real",
 };
 
 // Used to generate links in both the Header & Footer.
